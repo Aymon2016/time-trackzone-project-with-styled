@@ -3,15 +3,17 @@ import ClockListItem from './clockListItem/clockListItem'
 import { Container } from '../../shared/ui/Container'
 const ClockList = ({ clocks, deleteClock, updateClock }) => {
     return (
-        <Container direction="row" padding=" 2% 10%">
+        <Container direction="row" padding=" 2px 10px">
 
             {clocks ?
-                <Row xs={1} md={3} >
+                <Row md={3} >
                     {
                         clocks.map((clock) => (
                             <Col
+
                                 key={clock.id}
                                 style={{
+                                    minWidth: '345px',
                                     margintop: "20px",
                                     marginBottom: "20px"
                                 }}>

@@ -28,9 +28,9 @@ const ClockListItem = ({ clock, updateClock, deleteClock }) => {
     if (!date || !timer) return
     let offsetHrs = offset / 60;
     return (
-        <ClockShow >
+        <ClockShow>
             <Title>{clock.title}</Title>
-            <ClockShow padding="5% 10%" >
+            <ClockShow padding="5px 10px" >
                 <HoursAndMinute fontSize="40px">{format(timer, 'hh:mm')} {format(timer, 'aaa')}</HoursAndMinute>
                 <HoursAndMinute fontSize="20px">{format(timer, 'yyyy-MM-dd')}</HoursAndMinute>
                 <HoursAndMinute fontSize="15px">
