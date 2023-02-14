@@ -9,10 +9,12 @@ const ClockList = ({ clocks, deleteClock, updateClock }) => {
                 <Row xs={1} md={3} >
                     {
                         clocks.map((clock) => (
-                            <Col style={{
-                                margintop: "20px",
-                                marginBottom: "20px"
-                            }}>
+                            <Col
+                                key={clock.id}
+                                style={{
+                                    margintop: "20px",
+                                    marginBottom: "20px"
+                                }}>
                                 <ClockListItem
                                     deleteClock={deleteClock}
                                     updateClock={updateClock}

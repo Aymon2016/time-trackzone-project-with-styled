@@ -6,6 +6,17 @@ import Label from "../../shared/ui/label"
 import TextInput from "../../shared/ui/textInput"
 import styled from 'styled-components';
 
+const Container = styled.div`
+        width:100%;
+        padding:1rem;
+        border:1px solid #e1e1e1;
+        display:flex;
+        flex-direction:column;
+        gap:0.5rem;
+        background-color:white;
+        `;
+
+
 const ClockForm = ({ values = { title: '', timezone: 'UTC', offset: 0 }, handleClose, handleClock }) => {
 
     const [formValues, setFormValues] = useState({ ...values })
@@ -42,16 +53,6 @@ const ClockForm = ({ values = { title: '', timezone: 'UTC', offset: 0 }, handleC
 
 
     }
-
-    const Container = styled.div`
-        width:100%;
-        padding:1rem;
-        border:1px solid #e1e1e1;
-        display:flex;
-        flex-direction:column;
-        gap:0.5rem;
-        background-color:white;
-        `;
 
     return (
         <Container>
